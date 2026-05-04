@@ -1,0 +1,66 @@
+.plant-detail-header { display: flex; align-items: center; gap: 16px; }
+.back-btn { font-size: 13px; }
+.plant-type-badge { font-size: 12px; color: var(--gray-500); background: var(--green-50); padding: 2px 10px; border-radius: 999px; }
+.detail-actions { display: flex; gap: 10px; }
+
+.detail-top { margin-bottom: 24px; }
+
+.detail-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.detail-big { font-size: 32px; font-weight: 700; color: var(--gray-900); }
+.detail-stat-label { font-size: 12px; color: var(--gray-500); font-weight: 500; }
+.status-badge { font-size: 14px; padding: 6px 14px; }
+.predicted-watering { font-size: 11px; color: var(--gray-400); margin-top: 4px; }
+
+.charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+
+.chart-card { padding: 20px; }
+.chart-title { font-size: 14px; font-weight: 600; color: var(--gray-700); margin-bottom: 16px; }
+
+.no-data { font-size: 13px; color: var(--gray-400); text-align: center; padding: 24px; }
+
+.watering-history { padding: 20px; }
+.section-title { font-size: 15px; font-weight: 600; color: var(--gray-800); margin-bottom: 16px; }
+
+.watering-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.watering-table th { text-align: left; padding: 8px 12px; color: var(--gray-500); font-weight: 500; border-bottom: 1px solid var(--gray-100); }
+.watering-table td { padding: 10px 12px; border-bottom: 1px solid var(--gray-50); color: var(--gray-700); }
+.watering-table tr:last-child td { border-bottom: none; }
+
+@media (max-width: 768px) {
+  .charts-grid { grid-template-columns: 1fr; }
+}
+
+/* Predicted watering banner */
+.predicted-watering-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+  border-left: 4px solid var(--green-500);
+}
+.predicted-icon { font-size: 28px; }
+.predicted-label { font-size: 11px; color: var(--gray-500); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.predicted-value { font-size: 18px; font-weight: 700; color: var(--green-700); margin-top: 2px; }
+
+/* Plant type requirements */
+.plant-type-requirements { padding: 20px; margin-bottom: 24px; }
+.requirements-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 12px; }
+.req-item { display: flex; align-items: center; gap: 12px; padding: 12px; background: var(--gray-50); border-radius: 8px; }
+.req-icon { font-size: 22px; }
+.req-label { font-size: 11px; color: var(--gray-500); font-weight: 500; }
+.req-value { font-size: 15px; font-weight: 600; color: var(--gray-800); margin-top: 2px; }
+
+@media (max-width: 768px) {
+  .requirements-grid { grid-template-columns: 1fr; }
+}

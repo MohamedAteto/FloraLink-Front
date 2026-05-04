@@ -1,0 +1,81 @@
+.diary-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.diary-form { padding: 24px; }
+.section-title { font-size: 15px; font-weight: 600; color: var(--gray-800); margin-bottom: 16px; }
+
+.diary-entries { display: flex; flex-direction: column; gap: 16px; }
+
+.diary-entry { padding: 20px; }
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.entry-date { font-size: 13px; font-weight: 600; color: var(--green-700); }
+
+.entry-delete {
+  font-size: 12px;
+  padding: 5px 12px;
+}
+
+.entry-photo {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+.entry-notes {
+  font-size: 14px;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .diary-layout { grid-template-columns: 1fr; }
+}
+
+/* File upload */
+.file-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px dashed var(--gray-300);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--gray-600);
+  cursor: pointer;
+  background: var(--gray-50);
+}
+.file-input:hover { border-color: var(--green-400); background: var(--green-50); }
+
+.photo-preview-wrap {
+  position: relative;
+  margin-top: 10px;
+  display: inline-block;
+  width: 100%;
+}
+.photo-preview {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--gray-200);
+}
+.preview-remove {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 1.4;
+}

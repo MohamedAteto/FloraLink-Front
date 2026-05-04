@@ -1,0 +1,29 @@
+.skeleton-line {
+  background: linear-gradient(90deg, var(--gray-100) 25%, var(--gray-200) 50%, var(--gray-100) 75%);
+  background-size: 200% 100%;
+}
+
+.skeleton-card { padding: 20px; }
+
+.page-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+  gap: 16px;
+}
+
+.loader-ring {
+  width: 44px;
+  height: 44px;
+  border: 3px solid var(--gray-200);
+  border-top-color: var(--green-500);
+  border-radius: 50%;
+}
+
+.loader-text {
+  font-size: 14px;
+  color: var(--gray-400);
+  font-weight: 500;
+}
