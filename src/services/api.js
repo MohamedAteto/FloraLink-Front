@@ -1,7 +1,14 @@
 import axios from 'axios'
 
+const envApiUrl = import.meta.env.VITE_API_URL
+const isHttpsPage = typeof window !== 'undefined' && window.location.protocol === 'https:'
+// If the page is HTTPS and env URL is HTTP, use the Netlify /api proxy to avoid mixed content.
+const baseUrl = envApiUrl
+  ? (isHttpsPage && envApiUrl.startsWith('http://') ? '/api' : `${envApiUrl}/api`)
+  : '/api'
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : '/api'
+  baseURL: baseUrl
 })
 
 api.interceptors.request.use(config => {
