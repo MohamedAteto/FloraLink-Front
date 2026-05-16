@@ -1,0 +1,89 @@
+.lsc-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  transition: box-shadow 0.2s;
+}
+.lsc-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+
+.lsc-pulse { animation: lsc-flash 0.6s ease; }
+@keyframes lsc-flash {
+  0%   { background: #f0fdf4; }
+  100% { background: #ffffff; }
+}
+
+.lsc-loading, .lsc-error {
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+  padding: 24px;
+}
+.lsc-error { color: #dc2626; }
+
+.lsc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.lsc-title { font-weight: 700; font-size: 15px; color: #111827; }
+.lsc-dot {
+  width: 9px; height: 9px;
+  background: #16a34a;
+  border-radius: 50%;
+  animation: lsc-blink 2s infinite;
+}
+@keyframes lsc-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.lsc-ring-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.lsc-ring { width: 72px; height: 72px; }
+.lsc-ring-bg  { stroke: #e5e7eb; }
+.lsc-ring-fill { transition: stroke-dasharray 0.6s ease, stroke 0.6s ease; }
+.lsc-ring-text {
+  font-size: 10px;
+  font-weight: 700;
+  fill: #111827;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.lsc-status-block { display: flex; flex-direction: column; gap: 2px; }
+.lsc-status-emoji  { font-size: 28px; }
+.lsc-status-label  { font-weight: 700; font-size: 16px; }
+
+.lsc-metrics {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.lsc-metric {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.lsc-metric-icon   { font-size: 20px; }
+.lsc-metric-value  { font-weight: 700; font-size: 16px; color: #111827; }
+.lsc-metric-label  { font-size: 11px; color: #6b7280; margin-top: 1px; }
+
+.lsc-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #9ca3af;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 10px;
+}
