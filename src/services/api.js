@@ -49,3 +49,7 @@ export const addDiaryEntry = (data) => api.post('/diary', data)
 export const deleteDiaryEntry = (id) => api.delete(`/diary/${id}`)
 
 export default api
+
+// Live sensor — latest reading for a single plant
+export const getLatestReading = (plantId) =>
+  api.get(`/sensor-data/${plantId}/latest`)
